@@ -89,3 +89,15 @@ p {
   --light-blue: #99d7ff;
   --main-bg-color: #1b2932;
 }
+
+.button {
+  padding: 0.5em 1em;
+  background-color: var(--light-blue);
+  font-family: "Oswald", sans-serif;
+  color: var(--main-bg-color);
+  text-transform: uppercase;
+  /* border: none; */
+  /* outline: none; */
+  font-size: 1.5em;
+  box-shadow: 0px 1px 2px 2px #276873;
+}

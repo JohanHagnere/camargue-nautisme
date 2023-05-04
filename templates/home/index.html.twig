@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %} {% block extra_stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/_home.css') }}" />
+{% endblock %} {% block title %}Camargue-Nautisme{% endblock %} {% block body %}
+{#
+<section class="hero-section home">
+  <div class="hero-video-container">
+    <video autoplay muted loop class="hero-video">
+      <source src="{{ asset('images/hero_kayak.webm') }}" type="video/webm" />
+    </video>
+    <div class="hero-text">
+      <p>Pagayez vers de nouvelles aventures avec Camargue-Naustime</p>
+      <h1>Réservez</h1>
+    </div>
+  </div>
+</section>
+#}
+<main class="home">
+  <section class="hero">
+    <h1>Camargue-Nautisme</h1>
+    <h2>Naviguez vers de nouvelles aventures</h2>
+    <button class="button">Réservez</button>
+    <div class="img-container">
+      <img
+        src="{{ asset('images/hero_img.jpg') }}"
+        alt="Camargue-Nautisme"
+        class="hero-img"
+      />
+    </div>
+  </section>
+  <section class="presentation"></section>
+</main>
+{% endblock %}
