@@ -83,3 +83,9 @@ p {
 #__next {
   isolation: isolate;
 }
+
+/* CSS VARIABLE */
+:root {
+  --light-blue: #99d7ff;
+  --main-bg-color: #1b2932;
+}
