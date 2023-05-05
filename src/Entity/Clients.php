@@ -35,6 +35,10 @@ class Clients
         $this->reservations = new ArrayCollection();
     }
 
+    public function __toString() {
+        return $this->mail;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

@@ -2,9 +2,12 @@
 
 namespace App\Form;
 
+use App\Entity\Clients;
 use App\Entity\Reservations;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ReservationFormType extends AbstractType
@@ -13,8 +16,23 @@ class ReservationFormType extends AbstractType
     {
         $builder
             ->add('date')
-            ->add('client')
-            ->add('equipement');
+            ->add('prenom', TextType::class, [
+                'mapped' => false,   
+            ]
+            )
+            ->add('client', EntityType::class,
+            [
+                'attr' => [
+                    'class' => 'form-control',
+                ],
+                'class' => Clients::class
+            ])
+            ->add('equipement',TextType::class,
+            [
+                'attr' => [
+                    'class' => 'form-control',
+                ],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
