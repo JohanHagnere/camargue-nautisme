@@ -44,7 +44,9 @@ class Equipements
     {
         $this->reservations = new ArrayCollection();
     }
-
+    public function __toString() {
+        return $this->modele;
+    }
     public function getId(): ?int
     {
         return $this->id;
