@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %} {% block extra_stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/_home.css') }}" />
+{% endblock %} {% block title %}Camargue-Nautisme{% endblock %} {% block body %}
+<main class="home">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Camargue-Nautisme</h1>
+      <h2>Naviguez vers de nouvelles aventures</h2>
+      <button class="button cta big-btn"><span>Réservez</span></button>
+    </div>
+    <div class="img-container hero-video-container">
+      <video autoplay muted loop class="hero-video">
+        <source src="{{ asset('images/hero_kayak.webm') }}" type="video/webm" />
+      </video>
+      {#
+      <img
+        src="{{ asset('images/hero_img.jpg') }}"
+        alt="Camargue-Nautisme"
+        class="hero-img"
+      />
+      #}
+    </div>
+    <div class="overlay"></div>
+  </section>
+  <section class="presentation">
+    <article class="home-presentation-first">
+      <h3>Une expérience inoubliable</h3>
+      <div class="presentation_img">
+        <img
+          src="{{ asset('images/carnas.svg') }}"
+          alt="Palavas-Les-Flots"
+          class="small-img"
+        />
+      </div>
+      <p>
+        <strong>Camargue-Nautisme</strong> est la solution idéale pour les
+        amateurs de sport nautique à la recherche d'une expérience
+        inoubliable.<br />
+        Nous proposons une large gamme de kayaks de qualité pour tous les
+        niveaux de compétence et toutes les tailles de groupe, ainsi que des
+        options de location flexibles pour répondre à tous les besoins.
+      </p>
+      <button class="btn cta small-btn"><span>Équipements</span></button>
+    </article>
+    <article class="home-presentation-second">
+      <h3>Des lieux magnifiques</h3>
+      <div class="presentation_img">
+        <img
+          src="{{ asset('images/palavas.svg') }}"
+          alt="Palavas-Les-Flots"
+          class="small-img"
+        />
+      </div>
+      <p>
+        Que vous soyez en quête d'une aventure en pleine nature ou d'une journée
+        de détente en bord de mer, <strong>Carnas</strong> et
+        <strong>Palavas-les-Flots</strong> sont les points de départ idéaux pour
+        votre prochaine sortie en kayak ou en paddle.
+      </p>
+      <button class="btn cta small-btn"><span>Lieux</span></button>
+    </article>
+    <article class="home-presentation-third">
+      <h3>Une équipe qui vous guide</h3>
+      <div class="presentation_img">
+        <img
+          src="{{ asset('images/kayak_team.avif') }}"
+          alt="Palavas-Les-Flots"
+          class="small-img"
+        />
+      </div>
+      <p>
+        Notre équipe est engagée à offrir un service
+        <strong>exceptionnel</strong> et à s'assurer que tous les clients se
+        sentent en sécurité et à l'aise pendant leur expérience de location de
+        kayak ou de paddle. Que vous soyez <strong>novice ou expert</strong>,
+        nous avons tout ce dont vous avez besoin pour une journée amusante et
+        enrichissante sur l'eau.
+      </p>
+      <button class="btn cta small-btn"><span>Équipe</span></button>
+    </article>
+  </section>
+</main>
+{% endblock %}
