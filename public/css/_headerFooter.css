@@ -190,23 +190,46 @@ nav {
 }
    
   .newsletter{
-    width: 80%;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     margin: 20px 0px;
   }
  
-  #newsletter{
+  #letter{
     background-color: rgb(255, 255, 255,0.4);
-    border-radius: 3em;
+    border-radius: 1em;
     padding: 2rem;
   }
- 
+ .contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
+ .cartouche{
+  background-color: rgb(255, 255, 255,0.4);
+  width: 50rem;
+  height: 10rem;
+  border-radius: 2em;
+ }
+ #entreprise{
+  background-color: rgb(255, 255, 255,0.4);
+  border-radius: 1em;
+  padding: 2rem;
+}
+.lateam{
+  background-color: rgb(255, 255, 255,0.4);
+  border-radius: 1em;
+  padding: 2rem;
+}
 
-
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255,0.4);
+ }
 
 
 
