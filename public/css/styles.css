@@ -17,6 +17,11 @@
 /*
     3. Allow percentage-based heights in the application
   */
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -29,6 +34,10 @@ body {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+}
+
+main {
+  color: var(--main-color-text);
 }
 /*
     6. Improve media defaults
@@ -92,4 +101,5 @@ p {
 :root {
   --light-blue: #99d7ff;
   --main-bg-color: #1b2932;
+  --main-color-text: #303030;
 }

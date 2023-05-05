@@ -1,11 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-main {
-  color: #303030;
-}
-
 .container-localisation {
   margin: auto;
   width: 85%;
