@@ -14,8 +14,7 @@ class ReservationFormType extends AbstractType
         $builder
             ->add('date')
             ->add('client')
-            ->add('equipement')
-        ;
+            ->add('equipement');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

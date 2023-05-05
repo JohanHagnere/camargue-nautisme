@@ -42,24 +42,24 @@ class Reservations
         return $this;
     }
 
-    public function getClientId(): ?Clients
+    public function getClient(): ?Clients
     {
         return $this->client;
     }
 
-    public function setClientId(?Clients $client): self
+    public function setClient(?Clients $client): self
     {
         $this->client = $client;
 
         return $this;
     }
 
-    public function getEquipementId(): ?Equipements
+    public function getEquipement(): ?Equipements
     {
         return $this->equipement;
     }
 
-    public function setEquipementId(?Equipements $equipement): self
+    public function setEquipement(?Equipements $equipement): self
     {
         $this->equipement = $equipement;
 
