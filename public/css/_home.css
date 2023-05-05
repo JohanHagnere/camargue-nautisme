@@ -33,10 +33,27 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
 }
 
-.img-container {
-  height: 100%;
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.66);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: 3rem;
 }
 
 .hero img {
@@ -46,6 +63,7 @@
   left: 0;
   right: 0;
   height: 100%;
+  width: 100%;
   object-fit: cover;
   z-index: -1;
 }
@@ -60,4 +78,78 @@
 
 .home {
   color: white;
+}
+
+.big-btn {
+  font-size: 3rem;
+}
+
+.small-btn span {
+  font-size: 2rem;
+}
+
+.cta {
+  display: inline;
+  width: fit-content;
+  border-radius: 4px;
+  font-family: "Oswald", sans-serif;
+  background: var(--light-blue);
+  color: var(--main-bg-color);
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cta span {
+  padding: 1rem 2rem;
+  position: relative;
+  transition: 400ms;
+}
+
+.cta span::after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 45%;
+  transform: translateY(-50%);
+  right: -20px;
+  transition: 500ms;
+}
+
+.cta:hover span {
+  padding-right: 2.5rem;
+}
+
+.cta:hover span::after {
+  opacity: 1;
+  right: 0.3rem;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.7;
+  width: 90%;
+  margin: 0 auto;
+  color: var(--main-bg-color);
+  margin-bottom: 2rem !important;
+}
+
+.home-presentation-first > p,
+button,
+.home-presentation-second > p,
+button,
+.home-presentation-third > p,
+button {
+  margin-bottom: 1rem;
+}
+
+.home-presentation-third {
+  padding-bottom: 2rem;
+}
+
+.small-img {
+  width: 100%;
+  margin: 1rem 0;
 }
