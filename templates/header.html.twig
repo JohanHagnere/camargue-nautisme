@@ -1,0 +1,56 @@
+{% block extra_javascripts %} <script src="scripts/headerFooter.js"></script> {% endblock %}
+{% block extra_stylesheets %}<link rel="stylesheet" href="css/_headerFooter.css">{% endblock %}
+
+
+
+<header>
+	<nav>
+		<div class="navLogo">
+			<a href="">
+				<img src="{{asset('images/logoKayak.png')}}" alt="Logo">
+			</a>
+			<span>Camargue Nautisme</span>
+		</div>
+		<ul id="navDesktop">
+			<li>
+				<a href="">Accueil</a>
+			</li>
+			<li>
+				<a href="">Equipements</a>
+			</li>
+			<li>
+				<a href="">Bases Nautiques</a>
+			</li>
+			<li>
+				<a href="">L'équipe</a>
+			</li>
+		</ul>
+		<ul id="navReserver" >
+			<li>
+				<a  href="">Réserver</a>
+			</li>
+		</ul>
+
+		<div id="navMobile">
+			{# Menu burger #}
+			<div id="mySidenav" class="sidenav">
+				<a id="closeBtn" href="#" class="close">×</a>
+				<ul>
+					<li><a href="">Accueil</a></li>
+					<li><a href="">Equipements</a></li>
+					<li><a href="">Bases Nautiques</a></li>
+					<li><a href="">L'équipe</a></li>
+					<li><a href="">Réserver</a></li>
+				</ul>
+			</div>
+
+			<a href="#" id="openBtn">
+				<span class="burger-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</a>
+		</div>
+	</nav>
+</header>
