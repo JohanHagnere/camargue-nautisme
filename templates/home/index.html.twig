@@ -1,19 +1,6 @@
 {% extends 'base.html.twig' %} {% block extra_stylesheets %}
 <link rel="stylesheet" href="{{ asset('css/_home.css') }}" />
 {% endblock %} {% block title %}Camargue-Nautisme{% endblock %} {% block body %}
-{#
-<section class="hero-section home">
-  <div class="hero-video-container">
-    <video autoplay muted loop class="hero-video">
-      <source src="{{ asset('images/hero_kayak.webm') }}" type="video/webm" />
-    </video>
-    <div class="hero-text">
-      <p>Pagayez vers de nouvelles aventures avec Camargue-Naustime</p>
-      <h1>Réservez</h1>
-    </div>
-  </div>
-</section>
-#}
 <main class="home">
   <section class="hero">
     <div class="hero-content">
@@ -21,12 +8,17 @@
       <h2>Naviguez vers de nouvelles aventures</h2>
       <button class="button cta big-btn"><span>Réservez</span></button>
     </div>
-    <div class="img-container">
+    <div class="img-container hero-video-container">
+      <video autoplay muted loop class="hero-video">
+        <source src="{{ asset('images/hero_kayak.webm') }}" type="video/webm" />
+      </video>
+      {#
       <img
         src="{{ asset('images/hero_img.jpg') }}"
         alt="Camargue-Nautisme"
         class="hero-img"
       />
+      #}
     </div>
     <div class="overlay"></div>
   </section>
@@ -48,7 +40,7 @@
         niveaux de compétence et toutes les tailles de groupe, ainsi que des
         options de location flexibles pour répondre à tous les besoins.
       </p>
-      <button class="btn cta small-btn"><span>En savoir plus</span></button>
+      <button class="btn cta small-btn"><span>Équipements</span></button>
     </article>
     <article class="home-presentation-second">
       <h3>Des lieux magnifiques</h3>
@@ -65,7 +57,7 @@
         <strong>Palavas-les-Flots</strong> sont les points de départ idéaux pour
         votre prochaine sortie en kayak ou en paddle.
       </p>
-      <button class="btn cta small-btn"><span>En savoir plus</span></button>
+      <button class="btn cta small-btn"><span>Lieux</span></button>
     </article>
     <article class="home-presentation-third">
       <h3>Une équipe qui vous guide</h3>
@@ -84,7 +76,7 @@
         nous avons tout ce dont vous avez besoin pour une journée amusante et
         enrichissante sur l'eau.
       </p>
-      <button class="btn cta small-btn"><span>En savoir plus</span></button>
+      <button class="btn cta small-btn"><span>Équipe</span></button>
     </article>
   </section>
 </main>

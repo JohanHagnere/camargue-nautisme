@@ -10,6 +10,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
+  z-index: -2;
 }
 
 .hero-text {
@@ -27,7 +28,8 @@
 
 .hero-video {
   height: 100%;
-  max-width: initial;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .hero {
@@ -46,7 +48,7 @@
   left: 0;
   right: 0;
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.66);
+  background-color: rgba(0, 0, 0, 0.56);
 }
 
 .hero-content {
