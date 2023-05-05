@@ -80,40 +80,52 @@ ul li a {
 @media screen and (max-width: 767px) {
   /* Menu Burger */
 
-  #navMobile {
-    display: block;
-  }
-  #navDesktop {
-    display: none;
-  }
 
-  .sidenav {
-    height: 310px;
-    width: 250px;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 750px;
-    background-color: rgb(24, 116, 152, 0.4);
-    padding-top: 60px;
-    transform: translate(0, 59px);
-    transition: left 0.5s ease;
-    border: 1px solid #1b2932;
-  }
-
-  /* Sidenav menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #000000;
+ .picto i{
+  font-size: 3rem;
+}
+   
+  .newsletter{
     display: flex;
-    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
   }
+ 
+  #letter{
+    background-color: rgb(255, 255, 255,0.4);
+    border-radius: 1em;
+    padding: 2rem;
+  }
+ .contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
-  .sidenav a:hover {
-    color: #211eb2;
-  }
+ .cartouche{
+  background-color: rgb(255, 255, 255,0.4);
+  width: 50rem;
+  height: 10rem;
+  border-radius: 2em;
+ }
+ #entreprise{
+  background-color: rgb(255, 255, 255,0.4);
+  border-radius: 1em;
+  padding: 2rem;
+}
+.lateam{
+  background-color: rgb(255, 255, 255,0.4);
+  border-radius: 1em;
+  padding: 2rem;
+}
+
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255,0.4);
+ }
 
   .sidenav ul {
     list-style-type: none;
