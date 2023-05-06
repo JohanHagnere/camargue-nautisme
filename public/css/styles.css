@@ -99,7 +99,18 @@ p {
 
 /* CSS VARIABLE */
 :root {
+  /* font-size: 10px; */
   --light-blue: #99d7ff;
   --main-bg-color: #1b2932;
   --main-color-text: #303030;
 }
+
+.html {
+  font-size: calc(15px + 0.390625vw) !important;
+}
+
+/* @media screen and (min-width: 768px) {
+  html {
+    font-size: calc(18px + 0.390625vw) !important;
+  } */
+/* } */
