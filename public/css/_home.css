@@ -71,11 +71,11 @@
 }
 
 .hero h1 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .hero h2 {
-  font-size: 5rem;
+  /* font-size: 5rem; */
 }
 
 .home {
@@ -83,11 +83,11 @@
 }
 
 .big-btn {
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .small-btn span {
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .cta {
@@ -97,13 +97,13 @@
   font-family: "Oswald", sans-serif;
   background: var(--light-blue);
   color: var(--main-bg-color);
-  padding: 20px 0;
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .cta span {
-  padding: 1rem 2rem;
+  /* padding: 1rem 2rem; */
   position: relative;
   transition: 400ms;
 }
