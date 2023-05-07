@@ -81,51 +81,6 @@ ul li a {
   /* Menu Burger */
 
 
- .picto i{
-  font-size: 3rem;
-}
-   
-  .newsletter{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-  }
- 
-  #letter{
-    background-color: rgb(255, 255, 255,0.4);
-    border-radius: 1em;
-    padding: 2rem;
-  }
- .contact{
-  display: flex;
-  justify-content: center;
-  align-items: center;
- }
-
- .cartouche{
-  background-color: rgb(255, 255, 255,0.4);
-  width: 50rem;
-  height: 10rem;
-  border-radius: 2em;
- }
- #entreprise{
-  background-color: rgb(255, 255, 255,0.4);
-  border-radius: 1em;
-  padding: 2rem;
-}
-.lateam{
-  background-color: rgb(255, 255, 255,0.4);
-  border-radius: 1em;
-  padding: 2rem;
-}
-
-.contact{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255,0.4);
- }
 
   .sidenav ul {
     list-style-type: none;
@@ -170,15 +125,23 @@ footer {
   background-color: #99d7ff;
   display: flex;
   flex-direction: column;
+
 }
 
 .pictoReseaux {
   display: flex;
-  height: 6rem;
+  /* height: 6rem; */
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+  /*Pour que le lien ne soit plus "souligné"...*/
+  color: #1b2932;
+  /*pour que le lien ne soit plus violet*/
 }
 
 .picto {
@@ -192,7 +155,6 @@ footer {
 }
 
 .newsletter {
-  width: 80%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -200,21 +162,131 @@ footer {
   margin: 20px 0px;
 }
 
-#newsletter {
+.letter {
   background-color: rgb(255, 255, 255, 0.4);
-  border-radius: 3em;
-  padding: 2rem;
+  border-radius: 1em;
+  padding: 1rem;
 }
+
+.letter input {
+  border-radius: 0.3em;
+  background-color: rgb(255, 255, 255, 0.4);
+  border-color: #ffffff;
+}
+
+.letter button {
+  background-color: #99d7ff;
+  border-radius: 0.3em;
+  border-color: #99d7ff;
+}
+
+.contact {
+  display: flex;
+  height: auto;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.cartouche {
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 1em;
+  padding: 1rem;
+  flex-direction: row;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: auto;
+  width: auto;
+  gap: 1rem;
+
+}
+
+.entreprise {
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 1em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  justify-content: space-around
+}
+
+.boutonDeparts {
+  font-size: 1rem;
+  display: inline;
+  width: fit-content;
+  border-radius: 0.5rem;
+  font-family: "Oswald", sans-serif;
+  background: var(--light-blue);
+  color: var(--main-bg-color);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+}
+
+.depart {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.laTeam {
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 1em;
+  padding: 1rem;
+  align-items: center;
+  width: auto;
+}
+
+.imgTeam {
+  width: auto;
+  height: 10rem;
+  border-radius: 1em;
+  filter: drop-shadow(0.1rem 0.1rem 2px #969696);
+  max-width: none;
+}
+
+.recrutement {
+
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 800;
+  font-size: larger;
+}
+
+.copyRight {
+  background-color: rgb(255, 255, 255, 0.4);
+
+  width: 100%;
+
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 
 /*responsive*/
 
 /* Tablette */
-@media screen and (min-width: 744px) {
-}
+@media screen and (min-width: 744px) {}
 
 /* Desktop */
-@media screen and (min-width: 1000px) {
-}
+@media screen and (min-width: 1000px) {}
 
 /* @media only screen and (max-width: 767px) {
     footer section {
