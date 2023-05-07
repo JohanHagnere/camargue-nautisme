@@ -1,33 +1,25 @@
-{% block extra_javascripts %} <script src="scripts/headerFooter.js"></script> {% endblock %}
+{% block extra_javascripts %} <script defer src="scripts/burger.js"></script> {% endblock %}
 {% block extra_stylesheets %}<link rel="stylesheet" href="css/_headerFooter.css">{% endblock %}
-
-
-
 <header>
-	<nav>
+	<nav class="navbarre">
 		<div class="navLogo">
-			<a href="">
-				<img src="{{asset('images/logoKayak.png')}}" alt="Logo">
+			<a href="{{ path('app_home') }}">
+				<img src="images/logoKayak.png" alt="Logo">
 			</a>
-			<span>Camargue Nautisme</span>
+			<h1>Camargue-nautisme</h1>
 		</div>
 		<ul id="navDesktop">
 			<li>
-				<a href="">Accueil</a>
+				<a href="{{ path('app_home') }}"><h4>Accueil</h4></a>
 			</li>
 			<li>
-				<a href="">Equipements</a>
+				<a href=""><h4>Equipements</h4></a>
 			</li>
 			<li>
-				<a href="">Bases Nautiques</a>
+				<a href="{{ path('app_localisation') }}"><h4>Bases Nautiques</h4></a>
 			</li>
 			<li>
-				<a href="">L'équipe</a>
-			</li>
-		</ul>
-		<ul id="navReserver" >
-			<li>
-				<a  href="">Réserver</a>
+				<a href=""><h4>L'équipe</h4></a>
 			</li>
 		</ul>
 
@@ -36,11 +28,10 @@
 			<div id="mySidenav" class="sidenav">
 				<a id="closeBtn" href="#" class="close">×</a>
 				<ul>
-					<li><a href="">Accueil</a></li>
+					<li><a href="{{ path('app_home') }}">Accueil</a></li>
 					<li><a href="">Equipements</a></li>
-					<li><a href="">Bases Nautiques</a></li>
+					<li><a href="{{ path('app_localisation') }}">Bases Nautiques</a></li>
 					<li><a href="">L'équipe</a></li>
-					<li><a href="">Réserver</a></li>
 				</ul>
 			</div>
 
@@ -51,6 +42,9 @@
 					<span></span>
 				</span>
 			</a>
+		</div>
+		<div class="textReserver">
+			<a href=""><h6>Réserver!</h6></a>
 		</div>
 	</nav>
 </header>
