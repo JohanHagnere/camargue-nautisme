@@ -52,12 +52,17 @@ class ReservationController extends AbstractController
             // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             $allResa = $reservationsRepository->findBy(["date" => $dataDate, "equipement" => $allItems]);
 
-            $availableEquipment = $allItems;
-            foreach ($allResa as $resa) {
-                foreach ($allItems as $item) {
-                    if (!($resa->getEquipement()->getId() === $item->getId())) {
-                        $availableEquipment[] = $item;
+            $availableEquipment = [];
+            foreach ($allItems as $item) {
+                $isReserved = false;
+                foreach ($allResa as $resa) {
+                    if ($resa->getEquipement()->getId() === $item->getId()) {
+                        $isReserved = true;
+                        break;
                     }
+                }
+                if (!$isReserved) {
+                    $availableEquipment[] = $item;
                 }
             }
             dump($availableEquipment);
