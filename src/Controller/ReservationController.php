@@ -48,12 +48,21 @@ class ReservationController extends AbstractController
             }
             $finalClient;
             // dataequipement c'est le modele dequipement sélectionné
-            $allItems = $equipementsRepository->findBy(["modele" => $dataEquipement]);
-            $allResa = $reservationsRepository->findBy(["date" => $dataDate]);
-            dump($allItems);
-            dump($dataDate);
-            dump($allResa);
-            // on récupère le client, le modele, on récupère la liste de résa, on compare si le client à sélectionné une date qui est déjà contenu dans la table résa, si c'est le cas, il faut ensuite récupérer la liste des kayak du meme type, on boucle sur la liste des id equipement pour vérifier si ils sont dans les résa à cette date 
+            $allItems = $equipementsRepository->findBy(["modele" => $dataEquipement, "magasin" => "Carnon"]);
+            // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            $allResa = $reservationsRepository->findBy(["date" => $dataDate, "equipement" => $allItems]);
+
+            $availableEquipment = $allItems;
+            foreach ($allResa as $resa) {
+                foreach ($allItems as $item) {
+                    if (!($resa->getEquipement()->getId() === $item->getId())) {
+                        $availableEquipment[] = $item;
+                    }
+                }
+            }
+            dump($availableEquipment);
+
+            // on veut choper tous les id des équipements dans toutes les résa qui sont sorties puis avoir un tableau qui recense tous les équipements qui n'ont pas l'id sélectionné dans les résa
 
 
 
