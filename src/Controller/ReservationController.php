@@ -32,14 +32,16 @@ class ReservationController extends AbstractController
             $client->setMail($dataMail)->setNom($dataNom)->setPrenom($dataPrenom)->setTelephone($dataPhone);
             // Recup le client déjà en base
             $existingClient = $clientsRepository->findOneByMail($dataMail);
-
+            $idToFind = null;
             if ($existingClient) {
-                dump($existingClient);
+                $idToFind = $existingClient->getId();
+                dump($idToFind);
                 // utilisateur existe, donc passer son id à la résa
             } else {
                 // créer un nouvel utilisateur et passer son id à la résa
                 $clientsRepository->save($client, true);
-                dump($client);
+                $idToFind = $client->getId();
+                dump($idToFind);
             }
 
             // $reservationsRepository->save($reservation, true);
