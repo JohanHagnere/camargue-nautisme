@@ -7,6 +7,7 @@ use App\Entity\Reservations;
 use App\Entity\Equipements;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -50,12 +51,13 @@ class ReservationFormType extends AbstractType
             )
             ->add(
                 'equipement',
-                EntityType::class,
+                ChoiceType::class,
                 [
                     'attr' => [
                         'class' => 'form-control',
                     ],
-                    'class' => Equipements::class
+                    "choices" => ['kayak simple' => 'kayak simple', "kayak double" => 'kayak double', "paddle" => 'paddle'],
+                    'mapped' => false,
                 ]
             );
     }
