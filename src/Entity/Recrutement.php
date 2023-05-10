@@ -33,12 +33,12 @@ class Recrutement
     private ?string $adresse = null;
 
     #[ORM\Column(length: 50, nullable: true)]
-    private ?string $posteCandidaté = null;
+    private ?string $posteCandidate = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $diplomes = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $experiences = null;
 
     public function getId(): ?int
@@ -118,14 +118,14 @@ class Recrutement
         return $this;
     }
 
-    public function getPosteCandidaté(): ?string
+    public function getPosteCandidate(): ?string
     {
-        return $this->posteCandidaté;
+        return $this->posteCandidate;
     }
 
-    public function setPosteCandidaté(?string $posteCandidaté): self
+    public function setPosteCandidate(?string $posteCandidate): self
     {
-        $this->posteCandidaté = $posteCandidaté;
+        $this->posteCandidate = $posteCandidate;
 
         return $this;
     }

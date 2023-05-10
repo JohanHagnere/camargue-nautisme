@@ -18,7 +18,7 @@ class RecrutementType extends AbstractType
             ->add('mail')
             ->add('telephone')
             ->add('adresse')
-            ->add('posteCandidaté')
+            ->add('posteCandidate')
             ->add('diplomes')
             ->add('experiences')
         ;
