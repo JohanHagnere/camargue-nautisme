@@ -6,7 +6,9 @@
     <div class="hero-content">
       <h1>Camargue-Nautisme</h1>
       <h2>Naviguez vers de nouvelles aventures</h2>
-      <button class="button cta big-btn"><span>Réservez</span></button>
+      <a href="{{ path('app_reservation') }}" class="button cta big-btn"
+        ><span>Réservez</span></a
+      >
     </div>
     <div class="img-container hero-video-container">
       <video autoplay muted loop class="hero-video">
@@ -40,7 +42,9 @@
         niveaux de compétence et toutes les tailles de groupe, ainsi que des
         options de location flexibles pour répondre à tous les besoins.
       </p>
-      <button class="btn cta small-btn"><span>Équipements</span></button>
+      <a href="{{ path('app_equipements') }}" class="btn cta small-btn"
+        ><span>Équipements</span></a
+      >
     </article>
     <article class="home-presentation-second">
       <h3>Des lieux magnifiques</h3>
@@ -57,7 +61,9 @@
         <strong>Palavas-les-Flots</strong> sont les points de départ idéaux pour
         votre prochaine sortie en kayak ou en paddle.
       </p>
-      <button class="btn cta small-btn"><span>Lieux</span></button>
+      <a href="{{ path('app_localisation') }}" class="btn cta small-btn"
+        ><span>Lieux</span></a
+      >
     </article>
     <article class="home-presentation-third">
       <h3>Une équipe qui vous guide</h3>
@@ -76,7 +82,9 @@
         nous avons tout ce dont vous avez besoin pour une journée amusante et
         enrichissante sur l'eau.
       </p>
-      <button class="btn cta small-btn"><span>Équipe</span></button>
+      <a href="{{ path('app_home') }}" class="btn cta small-btn"
+        ><span>Équipe</span></a
+      >
     </article>
   </section>
 </main>

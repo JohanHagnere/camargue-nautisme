@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="{{ asset('css/_reservation.css') }}" /> {% endblock
 %} {% block title %}réserver!{% endblock %} {% block body %}
 
-<div class="example-wrapper">
+<main id="reservation-page">
   <h1>Reservations</h1>
 
   {{ form_start(form) }}
@@ -15,7 +15,7 @@
   {{ form_errors(form.equipement) }}
   <button type="submit">Envoyer</button>
   {{ form_end(form) }}
-</div>
+</main>
 
 {% endblock %} {% block extra_scripts %}
 <script src="{{ asset('scripts/resa_modal.js') }}"></script>

@@ -40,6 +40,27 @@
   text-decoration: none;
   border: solid #1b2932;
 }
+
+/* Ajout change couleur */
+.textReserver {
+  transition: all 250ms ease-in-out;
+}
+
+.textReserver a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.textReserver a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.textReserver:hover {
+  color: var(--main-bg-color);
+  background-color: var(--light-blue);
+}
+
 .sidenav {
   height: 310px;
   width: 250px;

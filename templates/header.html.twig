@@ -1,50 +1,54 @@
-{% block extra_javascripts %} <script defer src="scripts/burger.js"></script> {% endblock %}
-{% block extra_stylesheets %}<link rel="stylesheet" href="css/_headerFooter.css">{% endblock %}
+{% block extra_javascripts %}
+<script defer src="scripts/burger.js"></script>
+{% endblock %} {% block extra_stylesheets %}<link
+  rel="stylesheet"
+  href="css/_headerFooter.css"
+/>{% endblock %}
 <header>
-	<nav class="navbarre">
-		<div class="navLogo">
-			<a href="{{ path('app_home') }}">
-				<img src="images/logoKayak.png" alt="Logo">
-			</a>
-			<h1>Camargue-nautisme</h1>
-		</div>
-		<ul id="navDesktop">
-			<li>
-				<a href="{{ path('app_home') }}"><h4>Accueil</h4></a>
-			</li>
-			<li>
-				<a href="{{ path('app_equipements') }}"><h4>Equipements</h4></a>
-			</li>
-			<li>
-				<a href="{{ path('app_localisation') }}"><h4>Bases Nautiques</h4></a>
-			</li>
-			<li>
-				<a href=""><h4>L'équipe</h4></a>
-			</li>
-		</ul>
+  <nav class="navbarre">
+    <div class="navLogo">
+      <a href="{{ path('app_home') }}">
+        <img src="images/logoKayak.png" alt="Logo" />
+      </a>
+      <h1>Camargue-nautisme</h1>
+    </div>
+    <ul id="navDesktop">
+      <li>
+        <a href="{{ path('app_home') }}"><h4>Accueil</h4></a>
+      </li>
+      <li>
+        <a href="{{ path('app_equipements') }}"><h4>Equipements</h4></a>
+      </li>
+      <li>
+        <a href="{{ path('app_localisation') }}"><h4>Bases Nautiques</h4></a>
+      </li>
+      <li>
+        <a href=""><h4>L'équipe</h4></a>
+      </li>
+    </ul>
 
-		<div id="navMobile">
-			{# Menu burger #}
-			<div id="mySidenav" class="sidenav">
-				<a id="closeBtn" href="#" class="close">×</a>
-				<ul>
-					<li><a href="{{ path('app_home') }}">Accueil</a></li>
-					<li><a href="{{ path('app_equipements') }}">Equipements</a></li>
-					<li><a href="{{ path('app_localisation') }}">Bases Nautiques</a></li>
-					<li><a href="">L'équipe</a></li>
-				</ul>
-			</div>
+    <div id="navMobile">
+      {# Menu burger #}
+      <div id="mySidenav" class="sidenav">
+        <a id="closeBtn" href="#" class="close">×</a>
+        <ul>
+          <li><a href="{{ path('app_home') }}">Accueil</a></li>
+          <li><a href="{{ path('app_equipements') }}">Equipements</a></li>
+          <li><a href="{{ path('app_localisation') }}">Bases Nautiques</a></li>
+          <li><a href="">L'équipe</a></li>
+        </ul>
+      </div>
 
-			<a href="#" id="openBtn">
-				<span class="burger-icon">
-					<span></span>
-					<span></span>
-					<span></span>
-				</span>
-			</a>
-		</div>
-		<div class="textReserver">
-			<a href=""><h6>Réserver!</h6></a>
-		</div>
-	</nav>
+      <a href="#" id="openBtn">
+        <span class="burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </a>
+    </div>
+    <div class="textReserver">
+      <a href=""><h6>Réserver</h6></a>
+    </div>
+  </nav>
 </header>
