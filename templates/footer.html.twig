@@ -28,12 +28,11 @@
         </p>
         <div class="depart">
           <div id="carnonF">
-            <a href="https://www.codeur.com/tuto/css/menu-burger-html-css/"> <button class="boutonDeparts"><span>depart
+            <a href="{{ path('app_localisation') }}"> <button class="boutonDeparts"><span>depart
                   de<br>Carnon</span></button></a>
           </div>
           <div id="palavasF">
-            <button href="https://openclassrooms.com/forum/sujet/un-cadre-et-une-image-qui-s-adapte-71227"
-              class="boutonDeparts"><span>départ de<br>Palavas-les-flots</span></button>
+            <a href="{{ path('app_localisation') }}"> <button class="boutonDeparts"><span>départ de<br>Palavas-les-flots</span></button></a>
 
           </div>
         </div>
@@ -47,13 +46,13 @@
   <br>
   <section class="recrutement">
     <p> </p>
-    <a href="">Contact</a>
+    <p> </p>
+    <a href="{{ path('app_localisation') }}">Contact</a>
     <p> | </p>
     <a href="">Recrutement</a>
     <p> | </p>
-    <a href="">CGU</a>
-    <p> | </p>
-    <a href="">Revue de presse</a>
+    <a href="{{ path('app_cgu') }}">CGU</a>
+    <p> </p>
     <p> </p>
   </section>
   <br>

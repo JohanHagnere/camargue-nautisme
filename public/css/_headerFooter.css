@@ -38,6 +38,7 @@
   color: black;
   text-decoration: none;
   border: solid #1b2932;
+  
 }
 .sidenav {
   height: 310px ;
@@ -46,7 +47,7 @@
   z-index: 1;
   top: 0.9em;
   right: 120rem;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(255, 255, 255);
   padding-top: 3rem;
   transform: translate(0, 51px); 
   transition: left 0.5s ease;
@@ -58,13 +59,15 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #9f2424;
+  color: #171717;
   display: flex;
   transition: 0.3s;
+  text-shadow: #171717 0.em 0.em 0.2em;
 }
 
 .sidenav a:hover {
-  color: #111;
+  color: #38229a;
+  text-shadow: #38229a 0.05em 0.05em 0.1em;
 }
 
 .sidenav ul {
@@ -111,6 +114,11 @@
   display: flex;
   align-items: center;
   height: 40px;
+}
+
+.navLogo h1 {
+  display: none;
+
 }
 
 
@@ -165,6 +173,11 @@ ul li a {
     display: none  ;
   }
 
+  .navLogo h1 {
+    display: flex;
+  
+  }
+
 }
 
 
@@ -180,6 +193,10 @@ ul li a {
     display: none;
   }
 
+  .navLogo h1 {
+    display: flex;
+  
+  }
 }
 
 
@@ -222,7 +239,7 @@ footer {
 }
 
 .picto i {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 
@@ -240,7 +257,7 @@ footer {
   background-color: rgb(255, 255, 255, 0.4);
   border-radius: 1em;
   padding: 1rem;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
@@ -336,10 +353,25 @@ footer {
 /*responsive*/
 
 /* Tablette */
-@media screen and (min-width: 744px) {}
+@media screen and (min-width: 744px) {
+  .cartouche{
+    flex-direction: row;
+  }
+
+  .picto i {
+    font-size: 2rem;
+  }
+}
 
 /* Desktop */
-@media screen and (min-width: 1000px) {}
+@media screen and (min-width: 1000px) {
+.cartouche{
+  flex-direction: row;
+}
+.picto i {
+  font-size: 2rem;
+}
+}
 
 /* @media only screen and (max-width: 767px) {
     footer section {
