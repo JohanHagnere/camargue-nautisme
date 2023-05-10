@@ -4,7 +4,8 @@
 }
 
 .container-localisation h1 {
-  font-size: 4em;
+  /* font-size: 4em; */
+  font-size: 48px;
   letter-spacing: 4px;
   margin: 50px 0;
 }
@@ -12,6 +13,7 @@
 .container-localisation a {
   color: #303030;
   transition: ease-in-out 0.3s;
+
 }
 
 .container-localisation a:hover {
@@ -20,12 +22,13 @@
 }
 
 .container-localisation p {
-  font-size: 1.4em;
+  /* font-size: 1.4em; */
+  font-size: 18px;
   letter-spacing: 1px;
 }
 
 .contain-localisation {
-  margin-top: 100px;
+  margin-top: 3rem;
   position: relative;
 }
 
@@ -33,12 +36,16 @@
   width: 100%;
   height: 600px;
   object-fit: cover;
-  margin-bottom: 20em;
+  margin-bottom: 15em;
 }
 
 .contain-localisation p {
   width: 85%;
   margin: auto;
+  font-size: 18px;
+}
+.contain-localisation:last-child {
+  padding-bottom: 20px;
 }
 
 .localisation {
@@ -46,14 +53,29 @@
   width: 50%;
   position: absolute;
   padding: 1.2em;
-  top: 30em;
+  top: 35em;
   left: 50%;
   transform: translate(-50%, 0);
 }
+.text-equipement{
+  font-size: 20px !important;
+  color: white;
+}
+.text-equipement a {
+  color: beige;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.white-link:hover  {
+ color: blue
+}
+  
 
 .localisation p {
   color: white;
-  font-size: 2.8em;
+  /* font-size: 2.8em; */
+  font-size: 32px;
 }
 
 iframe {
@@ -62,6 +84,13 @@ iframe {
 
 h2 {
   text-align: center;
-  font-size: 3em;
+  /* font-size: 3em; */
+  font-size: 42px;
   margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .localisation {
+    background-color: aqua;
+  }
 }
