@@ -6,20 +6,19 @@ use App\Entity\Clients;
 use App\Entity\Reservations;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Repository\ReservationsRepository;
 use App\Form\ReservationFormType;
 use App\Repository\ClientsRepository;
 use App\Repository\EquipementsRepository;
-use Symfony\Component\HttpFoundation\Request;
 
 class ReservationController extends AbstractController
 {
     #[Route('/reservation', name: 'app_reservation', methods: ["GET", "POST"])]
     public function index(Request $request, ClientsRepository $clientsRepository, ReservationsRepository $reservationsRepository, EquipementsRepository $equipementsRepository): Response
     {
-
         $reservation = new Reservations();
         $form = $this->createForm(ReservationFormType::class, $reservation);
         $form->handleRequest($request);
@@ -35,6 +34,7 @@ class ReservationController extends AbstractController
             $client = new Clients;
             $client->setMail($dataMail)->setNom($dataNom)->setPrenom($dataPrenom)->setTelephone($dataPhone);
 
+
             $existingClient = $clientsRepository->findOneByMail($dataMail);
             $finalClient = null;
             if ($existingClient) {
@@ -43,7 +43,7 @@ class ReservationController extends AbstractController
                 $clientsRepository->save($client, true);
                 $finalClient = $client;
             }
-            $finalClient;
+
             $allItems = $equipementsRepository->findBy(["modele" => $dataEquipement, "magasin" => $dataLocalisation]);
             $allResa = $reservationsRepository->findBy(["date" => $dataDate, "equipement" => $allItems]);
 
@@ -60,18 +60,15 @@ class ReservationController extends AbstractController
                     $availableEquipment[] = $item;
                 }
             }
-            dump($availableEquipment);
 
             if (count($availableEquipment) > 0) {
-                $reservation->setClient($client)
+                $reservation->setClient($finalClient)
                     ->setEquipement($availableEquipment[0])
                     ->setDate($dataDate);
                 $reservationsRepository->save($reservation, true);
-                $this->addFlash('success', 'Votre réservation a bien été prise en compte !');
-                return $this->redirectToRoute('app_reservation', [], Response::HTTP_SEE_OTHER);
+                return $this->redirectToRoute('app_reservation', ['success' => 'true'], Response::HTTP_FOUND);
             } else {
-                $this->addFlash('error', 'Désolé, il n\'y a pas d\'équipement disponible à cette date.');
-                return $this->redirectToRoute('app_reservation', [], Response::HTTP_SEE_OTHER);
+                return $this->redirectToRoute('app_reservation', ['success' => 'false'], Response::HTTP_SEE_OTHER);
             }
         }
 
