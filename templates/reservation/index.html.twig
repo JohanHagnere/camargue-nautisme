@@ -1,17 +1,6 @@
-{% extends 'base.html.twig' %} {% block title %}réserver!{% endblock %} {% block
-body %}
-<style>
-  .example-wrapper {
-    margin: 1em auto;
-    max-width: 800px;
-    width: 95%;
-    font: 18px/1.5 sans-serif;
-  }
-  .example-wrapper code {
-    background: #f5f5f5;
-    padding: 2px 6px;
-  }
-</style>
+{% extends 'base.html.twig' %} {% block extra_stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/_reservation.css') }}" /> {% endblock
+%} {% block title %}réserver!{% endblock %} {% block body %}
 
 <div class="example-wrapper">
   <h1>Reservations</h1>
@@ -20,11 +9,14 @@ body %}
 
   {{ form_label(form.date) }}
   {{ form_widget(form.date) }}
-   {{ form_errors(form.date) }}
-   {{ form_label(form.equipement) }}
+  {{ form_errors(form.date) }}
+  {{ form_label(form.equipement) }}
   {{ form_widget(form.equipement) }}
-   {{ form_errors(form.equipement) }}
+  {{ form_errors(form.equipement) }}
   <button type="submit">Envoyer</button>
   {{ form_end(form) }}
 </div>
+
+{% endblock %} {% block extra_scripts %}
+<script src="{{ asset('scripts/resa_modal.js') }}"></script>
 {% endblock %}
