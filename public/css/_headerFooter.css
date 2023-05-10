@@ -1,239 +1,379 @@
 /* Page CGU */
-.cgu{
+.cgu {
   background-color: aqua;
-} 
+}
 
+/* header css */
+
+/* Version Mobile */
+
+
+/* Menu Burger */
+.navbarre{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+      padding: 0.5rem 1rem;
+      /* border-bottom: 1px solid red; */
+    
+}
+#navMobile {
+  display: flex;
+  align-items: center;
+}
+#navDesktop {
+  display: none;
+}
+.textReserver{
+  display: block;
+  font-family: "Playfair Display";
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0.2rem;
+  padding: 0.2rem;
+  font-size: 2em;
+  color: black;
+  text-decoration: none;
+  border: solid #1b2932;
+  
+}
+.sidenav {
+  height: 310px ;
+  width: 250px;
+  position: absolute;
+  z-index: 1;
+  top: 0.9em;
+  right: 120rem;
+  background-color: rgb(255, 255, 255);
+  padding-top: 3rem;
+  transform: translate(0, 51px); 
+  transition: left 0.5s ease;
+  border-radius: 0em 0em 0em 2em;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #171717;
+  display: flex;
+  transition: 0.3s;
+  text-shadow: #171717 0.em 0.em 0.2em;
+}
+
+.sidenav a:hover {
+  color: #38229a;
+  text-shadow: #38229a 0.05em 0.05em 0.1em;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  right: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+#openBtn{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.navLogo {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo img {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.navLogo h1 {
+  display: none;
+
+}
+
+
+span .burger-icon {
+  position: relative;
+  margin-left: 20px;
+  font-size: 15px;
+  font-family: "Raleway";
+  letter-spacing: 5px;
+  color: black;
+  text-decoration: none;
+}
 
 /*NavBar css */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    background-color: rgb(24, 116, 152,0.4);
-    padding: 5px 20px;
-    border-bottom: 1px solid #1B2932;
-  }
-  
-  .navLogo {
-    display: flex;
-    align-items: center;
-  }
-  
-  img {
-    display: flex;
-    align-items: center;
-    height: 40px;
-  }
-  
-  
-  span {
-    position: relative;
-    margin-left: 20px;
-    font-size: 15px;
-    font-family: "OSWALD";
-    letter-spacing: 5px;
-    color: #1B2932;
-    text-decoration: none;
-  }
-  
-  ul {
-    display: block;
-    font-family: "Raleway";
-    justify-content: flex-end;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-left: 20px;
-  }
-  
-  ul li:first-child {
-    margin-left: 0px;
-  }
-  
-  ul li a {
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
-  }
-  
-  #navDesktop {
-    display: flex  ;
-  }
 
-   #navReserver {
-    border: 1px solid #1B2932;
-    align-items: center;
-  }
-  
-  #navMobile {
-    display: none;
-  }
-
-  @media screen and (max-width: 500px) {
-    #navReserver {
-      display: none;
-    }}
-    
-  @media screen and (max-width: 767px) {
-  /* Menu Burger */
-  
-    #navMobile {
-      display: block;
-    }
-    #navDesktop {
-      display: none;
-    }
-  
-    .sidenav {
-      height: 310px ;
-      width: 250px;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      right: 750px;
-      background-color: rgb(24, 116, 152, 0.4);
-      padding-top: 60px;
-      transform: translate(0, 59px); 
-      transition: left 0.5s ease;
-      border: 1px solid #1B2932;
-    }
-  
-    /* Sidenav menu links */
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #000000;
-      display: flex;
-      transition: 0.3s;
-    }
-  
-    .sidenav a:hover {
-      color: #211eb2;
-    }
-  
-    .sidenav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-  
-    /* Active class */
-    .sidenav.active {
-      right: 10;
-    }
-  
-    /* Close btn */
-    .sidenav .close {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-    }
-  
-    /* Icône burger */
-    .burger-icon span {
-      display: block;
-      width: 35px;
-      height: 5px;
-      background-color: black;
-      margin: 6px 0;
-    }
-  
-    #openBtn{
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-  }
-  
-
-
-
-
-
-
-  
-
-  /* footer css */
-  
-  /* Version Mobile */
-
-  footer{
-    background-color: #99D7FF;
-    display: flex;
-    flex-direction: column;
-    
-  }
-
- .pictoReseaux{
-  display: flex;
- height: 6rem;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   margin: 1rem;
- }
-
- .picto{
-  display: flex;
-  width: 70%;
-  justify-content: space-between;
- }
-
- .picto i{
-  font-size: 3rem;
+ul {
+  display: block;
+  font-family: "Playfair Display";
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-   
-  .newsletter{
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0px;
-  }
- 
-  #newsletter{
-    background-color: rgb(255, 255, 255,0.4);
-    border-radius: 3em;
-    padding: 2rem;
-  }
- 
+
+ul li {
+  margin-left: 20px;
+}
 
 
 
+ul li a {
+  font-size: 15px;
+  color: black;
+  text-decoration: none;
+}
 
+#navDesktop {
+  display: none  ;
+}
 
+#navMobile {
+  display: block;
+}
+  
 
+/*responsive*/
 
-
-  /*responsive*/
-
-  /* Tablette */
+/* Tablette */
 @media screen and (min-width: 744px) {
-  
+  #navDesktop {
+    display: none  ;
+  }
 
+  .navLogo h1 {
+    display: flex;
+  
+  }
 
 }
-
 
 
 
 /* Desktop */
-@media screen and (min-width: 1000px) {   
+@media screen and (min-width: 1000px) {
 
+  #navDesktop {
+    display: flex  ;
+    gap:2rem;
+    }
+  #navMobile {
+    display: none;
+  }
 
-
+  .navLogo h1 {
+    display: flex;
+  
+  }
 }
 
 
 
-  /* @media only screen and (max-width: 767px) {
+
+
+ 
+
+/* footer css */
+
+/* Version Mobile */
+
+footer {
+  background-color: #99d7ff;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.pictoReseaux {
+  display: flex;
+  /* height: 6rem; */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.picto a {
+  text-decoration: none;
+  /*Pour que le lien ne soit plus "souligné"...*/
+  color: #ffffff;
+  /*pour que le lien ne soit plus violet*/
+}
+
+.picto {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+}
+
+.picto i {
+  font-size: 1.5rem;
+}
+
+
+.contact {
+  display: flex;
+  height: auto;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.cartouche {
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 1em;
+  padding: 1rem;
+  flex-direction: column;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  height: auto;
+  width: auto;
+  gap: 1rem;
+
+}
+
+.entreprise {
+  background-color: #99d7ff;
+  border-radius: 1em;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  justify-content: space-around
+}
+
+.boutonDeparts {
+  font-size: 1rem;
+  display: inline;
+  width: fit-content;
+  border-radius: 0.5rem;
+  font-family: "Oswald", sans-serif;
+  background: white;
+  color: var(--main-bg-color);
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+
+}
+
+.depart {
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+.laTeam {
+  background-color: #99d7ff;
+  border-radius: 1em;
+  padding: 1rem;
+  align-items: center;
+  width: auto;
+}
+
+.imgTeam {
+  width: auto;
+  height: 10rem;
+  border-radius: 1em;
+  filter: drop-shadow(0.1rem 0.1rem 2px #969696);
+  max-width: none;
+}
+
+.recrutement {
+
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  align-items: center;
+  font-weight: 800;
+  font-size: larger;
+}
+.recrutement a {
+  text-decoration: none;
+  /*Pour que le lien ne soit plus "souligné"...*/
+  color: #1B2932;
+  /*pour que le lien ne soit plus violet*/
+}
+
+
+.copyRight {
+  background-color: rgb(255, 255, 255, 0.4);
+
+  width: 100%;
+
+}
+
+.copy {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+/*responsive*/
+
+/* Tablette */
+@media screen and (min-width: 744px) {
+  .cartouche{
+    flex-direction: row;
+  }
+
+  .picto i {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+.cartouche{
+  flex-direction: row;
+}
+.picto i {
+  font-size: 2rem;
+}
+}
+
+/* @media only screen and (max-width: 767px) {
     footer section {
       display: flex;
       flex-direction: column;

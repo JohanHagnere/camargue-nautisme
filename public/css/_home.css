@@ -28,7 +28,7 @@
 
 .hero-video {
   height: 100%;
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -71,11 +71,13 @@
 }
 
 .hero h1 {
-  font-size: 3rem;
+  /* font-size: 3rem; */
+  font-size: 5vw;
 }
 
 .hero h2 {
-  font-size: 5rem;
+  /* font-size: 5rem; */
+  font-size: 7vw;
 }
 
 .home {
@@ -83,11 +85,11 @@
 }
 
 .big-btn {
-  font-size: 3rem;
+  /* font-size: 3rem; */
 }
 
 .small-btn span {
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .cta {
@@ -97,13 +99,13 @@
   font-family: "Oswald", sans-serif;
   background: var(--light-blue);
   color: var(--main-bg-color);
-  padding: 20px 0;
+  padding: 0.5rem;
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .cta span {
-  padding: 1rem 2rem;
+  padding: 0.5rem;
   position: relative;
   transition: 400ms;
 }
@@ -115,11 +117,11 @@
   top: 45%;
   transform: translateY(-50%);
   right: -20px;
-  transition: 500ms;
+  transition: all 500ms ease-in-out;
 }
 
 .cta:hover span {
-  padding-right: 2.5rem;
+  padding-right: 1rem;
 }
 
 .cta:hover span::after {
