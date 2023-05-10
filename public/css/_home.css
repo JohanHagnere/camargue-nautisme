@@ -169,3 +169,9 @@ button {
     font-size: 3vw;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .hero-content h1 {
+    display: none;
+  }
+}
