@@ -7,25 +7,18 @@
 
   <section class="pictoReseaux">
     <div class="picto">
-      <i class="fa-brands fa-facebook-f"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-youtube"></i>
-      <i class="fa-brands fa-tiktok"></i>
+      <a href="https://www.facebook.com/EcoleDeVoileSaintesMariesDeLaMer/?locale=fr_FR"><i
+          class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/p/CqNS_RboJIh/?img_index=1"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/GetigneCK"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.youtube.com/watch?v=uBY3pNExhLk&ab_channel=TrekTV"><i class="fa-brands fa-youtube"></i></a>
+      <a href="https://www.tiktok.com/@chilowe_official/video/7229345192808090907"><i
+          class="fa-brands fa-tiktok"></i></a>
     </div>
 
 
   </section>
-  <section class="newsletter">
-    <div id="letter">
-
-      <p> <i class="fa-regular fa-envelope"></i> Nos actualité en Newsletter </p>
-      <form action="" method="POST">
-        <input type="text" placeholder="email@example.com">
-        <button type="submit">S'inscrire</button>
-      </form>
-    </div>
-  </section>
+  
 
   <section class="contact">
     <div class="cartouche">
@@ -33,16 +26,41 @@
         <h3>Qui sommes nous:</h3>
         <p>Camargue Nautisme, ghgqf ghhjff ehfjfgez aztetyza aztrtyzd ztyf fefzrty zty t e fzty ygygegezygfg gezygdez g.
         </p>
+        <div class="depart">
+          <div id="carnonF">
+            <a href="{{ path('app_localisation') }}"> <button class="boutonDeparts"><span>depart
+                  de<br>Carnon</span></button></a>
+          </div>
+          <div id="palavasF">
+            <a href="{{ path('app_localisation') }}"> <button class="boutonDeparts"><span>départ de<br>Palavas-les-flots</span></button></a>
+
+          </div>
+        </div>
       </div>
-      <div class="lateam">
+      <div class="laTeam">
         <h3>La Team</h3>
-        <img src="{{asset('images/team1.jpg')}}" alt="team">
+        <img class="imgTeam" src="{{asset('images/team1.jpg')}}" alt="team">
       </div>
     </div>
   </section>
-  <section class="copyRight"></section>
-  <div class="copy">
-    <p>by Web Agence. &copy;{{ "now"|date("Y") }} All Rights Reserved</p>
-  </div>
+  <br>
+  <section class="recrutement">
+    <p> </p>
+    <p> </p>
+    <a href="{{ path('app_localisation') }}">Contact</a>
+    <p> | </p>
+    <a href="">Recrutement</a>
+    <p> | </p>
+    <a href="{{ path('app_cgu') }}">CGU</a>
+    <p> </p>
+    <p> </p>
+  </section>
+  <br>
+  <section class="copyRight">
+    <div class="copy">
+      <p>by Web Agence.</p>
+      <p>&copy;{{ "now"|date("Y") }}</p>
+      <p>All Rights Reserved</p>
+    </div>
   </section>
 </footer>
