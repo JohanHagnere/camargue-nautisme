@@ -22,6 +22,17 @@ class ReservationFormType extends AbstractType
                 "widget" => 'single_text'
             ])
             ->add(
+                'localisation',
+                ChoiceType::class,
+                [
+                    'attr' => [
+                        'class' => 'form-control',
+                    ],
+                    "choices" => ['Carnon' => 'carnon', "Palavas-les-flots" => 'palavas-les-flots'],
+                    'mapped' => false,
+                ]
+            )
+            ->add(
                 'prenom',
                 TextType::class,
                 [
