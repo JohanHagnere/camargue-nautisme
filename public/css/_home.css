@@ -71,25 +71,20 @@
 }
 
 .hero h1 {
-  /* font-size: 3rem; */
   font-size: 5vw;
 }
 
 .hero h2 {
-  /* font-size: 5rem; */
   font-size: 7vw;
+}
+
+.big-btn {
+  font-size: 4vw;
 }
 
 .home {
   color: white;
-}
-
-.big-btn {
-  /* font-size: 3rem; */
-}
-
-.small-btn span {
-  /* font-size: 2rem; */
+  padding-top: 0 !important;
 }
 
 .cta {
@@ -156,4 +151,22 @@ button {
 .small-img {
   width: 100%;
   margin: 1rem 0;
+}
+
+@media screen and (max-width: 426px) {
+  .hero-content {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .presentation p {
+    font-size: 3.5vw;
+  }
+  .presentation h3 {
+    font-size: 5vw;
+  }
+  .presentation .small-btn {
+    font-size: 3vw;
+  }
 }
