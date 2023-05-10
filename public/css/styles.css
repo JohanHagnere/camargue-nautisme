@@ -109,6 +109,10 @@ p {
   font-size: calc(15px + 0.390625vw) !important;
 }
 
+main {
+  padding-top: 2.5rem;
+}
+
 /* @media screen and (min-width: 768px) {
   html {
     font-size: calc(18px + 0.390625vw) !important;
