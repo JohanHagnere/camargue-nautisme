@@ -13,6 +13,7 @@
 .container-localisation a {
   color: #303030;
   transition: ease-in-out 0.3s;
+
 }
 
 .container-localisation a:hover {
@@ -43,6 +44,9 @@
   margin: auto;
   font-size: 18px;
 }
+.contain-localisation:last-child {
+  padding-bottom: 20px;
+}
 
 .localisation {
   background-color: var(--main-bg-color);
@@ -53,6 +57,20 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
+.text-equipement{
+  font-size: 20px !important;
+  color: white;
+}
+.text-equipement a {
+  color: beige;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.white-link:hover  {
+ color: blue
+}
+  
 
 .localisation p {
   color: white;

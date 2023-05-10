@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %} {% block extra_stylesheets %}
+<link rel="stylesheet" href="css/localisation.css" />
+{% endblock %} {% block title %}Nos Equipements{% endblock %} {% block body %}
+
+<main>
+  <div class="container-localisation">
+    <h1>
+     Découvrez tous nos équipements
+    </h1>
+
+    <p>
+      lorem Ipsum is simply dummy  text, but who knows what else it
+        lorem Ipsum is simply dummy text, but who knows what else   it  is  just
+         lorem Ipsum is simply dummy text, but who knows what
+         lorem Ipsum is simply dummy text, but who knows
+         lorem Ipsum is simply dummy text
+         lorem Ipsum is simply dummy text, but who knows what
+         lorem Ipsum is simply dummy text, but who knows
+         lorem Ipsum is simply dummy text
+    </p>
+  </div>
+
+  <div class="contain-localisation">
+    <h2 id="carnon">Le kayak simple</h2>
+    <img src="{{ asset('images/kayak-simple.jpeg') }}" alt="kayak simple" />
+    <div class="localisation">
+      <p class="text-equipement">
+        
+<strong>Prix de l’activité à la journée :</strong> 30 euros
+</br>
+  </p>
+       <p class="text-equipement">
+<strong>Point de location proposant cet équipement :</strong> <a class="white-link"
+ href="{{ path('app_localisation')}}">Carnon </a></br>
+ <a class="white-link"
+  href="{{ path('app_localisation')}}">Palavas-Les-Flots</a> </br>
+<strong>Détail de l’équipement : </strong> Idéal pour une sortie en mer </br>
+<strong>Type de public : </strong> Tous public </br>
+<strong>Informations complémentaires : </strong>  Rames, gilet de sauvetage et bidon étanche sont fournis.
+Notre équipe vous proposera un parcours adapté en
+fonction de votre niveau et de vos envies
+
+      </p>
+    </div>
+    <p>
+      Le kayak simple est bien plus qu'un simple moyen de naviguer sur l'eau.
+       C'est une expérience immersive qui vous permet de vous connecter profondément
+        avec la nature et d'explorer des paysages magnifiques d'une manière intime et 
+        tranquille. En glissant sur l'eau, vous pouvez ressentir la puissance de vos propres
+     mouvements et vous laissez emporter par la douce sensation de liberté. Le kayak simple
+         offre également une occasion unique d'apprécier la faune et la flore dans leur
+         environnement naturel, que ce soit en explorant des rivières sinueuses, en traversant
+     des lacs paisibles ou en défiant les vagues de l'océan. En plus de procurer
+     une sensation de bien-être et de détente, le kayak simple est également
+         un excellent moyen de faire de l'exercice, car il sollicite vos muscles 
+         et stimule votre système cardiovasculaire. Que vous soyez un aventurier en
+         quête d'adrénaline ou simplement à la recherche d'un moment de calme et de
+         contemplation, le kayak simple est l'activité idéale pour vous reconnecter
+         avec la nature et vous ressourcer en toute simplicité.
+    </p>
+
+  </div>
+ <div class="contain-localisation">
+    <h2 id="carnon">Le kayak double</h2>
+    <img src="{{ asset('images/kayak-double.jpeg') }}" alt="kayak double" />
+    <div class="localisation">
+      <p class="text-equipement">
+        
+<strong>Prix de l’activité à la journée :</strong> 40 euros
+</br>
+  </p>
+       <p class="text-equipement">
+<strong>Point de location proposant cet équipement :</strong> <a  class="white-link"
+ href="{{ path('app_localisation')}}">Carnon </a></br>
+ <a class="white-link"
+  href="{{ path('app_localisation')}}">Palavas-Les-Flots</a> </br>
+<strong>Détail de l’équipement : </strong> Idéal pour une sortie en mer à deux </br>
+<strong>Type de public : </strong> Tous public </br>
+<strong>Informations complémentaires : </strong>  Rames, gilet de sauvetage et bidon étanche sont fournis.
+Notre équipe vous proposera un parcours adapté en
+fonction de votre niveau et de vos envies pour une belle balade à deux
+      </p>
+    </div>
+    <p>
+     Le kayak double offre une expérience tout aussi enrichissante que son
+      homologue simple, mais avec une dimension sociale supplémentaire. En 
+      pagayant à deux, vous partagez cette aventure avec un compagnon, que
+       ce soit un ami, un partenaire ou un membre de votre famille, renforçant
+        ainsi les liens et créant des souvenirs inoubliables. Vous pouvez 
+        collaborer harmonieusement pour atteindre vos objectifs communs, tout
+         en partageant des conversations animées et des rires contagieux.
+    </p>
+  </div>
+<div class="contain-localisation">
+    <h2 id="carnon">Le paddle</h2>
+    <img src="{{ asset('images/paddle.jpeg') }}" alt="paddle" />
+    <div class="localisation">
+      <p class="text-equipement">     
+<strong>Prix de l’activité à la journée :</strong> 20 euros
+</br>
+  </p>
+       <p class="text-equipement">
+<strong>Point de location proposant cet équipement :</strong> <a class="white-link"href="{{ path('app_localisation')}}">Carnon </a></br>
+ <a class="white-link" href="{{ path('app_localisation')}}">Palavas-Les-Flots</a> </br>
+<strong>Détail de l’équipement : </strong> Idéal pour profiter du bord de mer </br>
+<strong>Type de public : </strong> Tous public </br>
+<strong>Informations complémentaires : </strong>  Rames, gilet de sauvetage fournis.
+      </p>
+    </div>
+    <p>
+     Le paddle, aussi connu sous le nom de stand-up paddle, est une activité 
+     qui combine équilibre, force et tranquillité pour offrir une expérience 
+     unique sur l'eau. En vous tenant debout sur une planche spécialement conçue,
+      vous pouvez explorer les étendues d'eau d'une manière totalement nouvelle.
+       Le paddle vous donne une perspective unique, vous permettant d'admirer les
+        paysages environnants tout en flottant sur l'eau. Que ce soit sur l'océan,
+         les lacs ou les rivières, le paddle vous permet d'accéder à des endroits 
+         autrement inaccessibles et de découvrir des recoins isolés et préservés.
+    </p>
+  </div>
+</main>
+
+{% endblock %}
