@@ -22,3 +22,59 @@
 #resa-modal p {
   margin-bottom: 0.5rem;
 }
+#reservation-page {
+  padding-top: 4rem !important;
+}
+#reservation-page h1 {
+  margin-bottom: 0.3rem;
+  margin-left: 2rem;
+}
+
+#reservation-page form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem;
+}
+
+#reservation-page form > * {
+  margin-bottom: 0.5rem;
+  min-width: fit-content;
+  width: 200px;
+}
+#reservation-page form label {
+  display: block;
+  width: fit-content;
+  margin-bottom: 0.5rem;
+}
+#reservation-page form input,
+#reservation-page form select {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 200px;
+}
+
+#reservation-page form button {
+  order: 4;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem !important;
+}
+
+.cta {
+  display: inline;
+  width: fit-content;
+  border-radius: 4px;
+  font-family: "Oswald", sans-serif;
+  background: var(--light-blue);
+  color: var(--main-bg-color);
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid var(--main-bg-color);
+}
+.big-btn {
+  font-size: clamp(20px, 2vw, 3rem);
+}
