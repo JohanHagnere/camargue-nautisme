@@ -70,14 +70,6 @@
   z-index: -1;
 }
 
-.hero h1 {
-  font-size: 5vw;
-}
-
-.hero h2 {
-  font-size: 7vw;
-}
-
 .big-btn {
   font-size: 4vw;
 }
@@ -162,6 +154,12 @@ button {
 @media screen and (min-width: 426px) {
   .presentation p {
     font-size: 3.5vw;
+  }
+  .hero h1 {
+    font-size: 5vw;
+  }
+  .hero h2 {
+    font-size: 7vw;
   }
   .presentation h3 {
     font-size: 5vw;
