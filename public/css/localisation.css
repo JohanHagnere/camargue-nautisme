@@ -5,15 +5,14 @@
 
 .container-localisation h1 {
   /* font-size: 4em; */
-  font-size: 48px;
+  font-size: 32px;
   letter-spacing: 4px;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .container-localisation a {
   color: #303030;
   transition: ease-in-out 0.3s;
-
 }
 
 .container-localisation a:hover {
@@ -28,15 +27,15 @@
 }
 
 .contain-localisation {
-  margin-top: 3rem;
+  margin-top: 15px;
   position: relative;
 }
 
 .contain-localisation img {
   width: 100%;
-  height: 600px;
   object-fit: cover;
-  margin-bottom: 15em;
+  margin-bottom: 11.5em;
+  height: 220px;
 }
 
 .contain-localisation p {
@@ -50,14 +49,14 @@
 
 .localisation {
   background-color: var(--main-bg-color);
-  width: 50%;
+  width: 75%;
   position: absolute;
-  padding: 1.2em;
-  top: 35em;
+  padding: 1em;
+  top: 15em;
   left: 50%;
   transform: translate(-50%, 0);
 }
-.text-equipement{
+.text-equipement {
   font-size: 20px !important;
   color: white;
 }
@@ -67,30 +66,115 @@
   cursor: pointer;
   text-decoration: none;
 }
-.white-link:hover  {
- color: blue
+.white-link:hover {
+  color: blue;
 }
-  
 
 .localisation p {
   color: white;
   /* font-size: 2.8em; */
-  font-size: 32px;
+  font-size: 18px;
 }
 
 iframe {
   margin-top: 50px;
+  height: 250px;
 }
 
-h2 {
+.contain-localisation h2 {
   text-align: center;
   /* font-size: 3em; */
-  font-size: 42px;
+  font-size: 28px;
   margin-bottom: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .container-localisation h1 {
+    font-size: 38px;
+  }
+
+  .container-localisation p {
+    font-size: 20px;
+  }
+
+  .contain-localisation h2 {
+    font-size: 32px;
+  }
+
+  .contain-localisation p {
+    font-size: 20px;
+  }
+
   .localisation {
-    background-color: aqua;
+    width: 45%;
+    font-size: 20px;
+    top: 17em;
+  }
+
+  .contain-localisation img {
+    height: 350px;
+    margin-bottom: 11em;
+  }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-localisation h1 {
+    font-size: 42px;
+  }
+
+  .container-localisation p {
+    font-size: 24px;
+  }
+
+  .contain-localisation h2 {
+    font-size: 36px;
+  }
+
+  .contain-localisation p {
+    font-size: 24px;
+  }
+
+  .contain-localisation img {
+    height: 400px;
+    margin-bottom: 8em;
+  }
+
+  iframe {
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-localisation h1 {
+    font-size: 48px;
+  }
+
+  .contain-localisation h2 {
+    font-size: 40px;
+  }
+
+  .contain-localisation img {
+    height: 500px;
+  }
+
+  .localisation {
+    font-size: 24px;
+    top: 20em;
+  }
+
+  .container-localisation p {
+    font-size: 26px;
+  }
+
+  .contain-localisation p {
+    font-size: 26px;
+  }
+
+  iframe {
+    height: 500px;
   }
 }
