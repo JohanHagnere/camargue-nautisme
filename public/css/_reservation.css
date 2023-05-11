@@ -33,9 +33,9 @@
 #reservation-page form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: "Raleway", sans-serif;
+  max-width: 200px;
+  margin: 0 auto;
   margin-bottom: 1rem;
 }
 
