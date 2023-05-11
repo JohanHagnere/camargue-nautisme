@@ -154,13 +154,13 @@ button {
 
 @media screen and (min-width: 426px) {
   .presentation p {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
   .hero h1 {
     /* font-size: 5vw; */
   }
   .hero h2 {
-    font-size: clamp(24px, 7vw, 4rem);
+    font-size: clamp(24px, 6vw, 4rem);
   }
   .presentation h3 {
     font-size: clamp(20px, 5vw, 3.5rem);
