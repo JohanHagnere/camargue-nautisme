@@ -75,7 +75,8 @@
     padding: 20px;
     display: block;
     background-color:  var(--main-bg-color);
-    color:#ffffff
+    color:#ffffff;
+    height: 100%;
   }
   
   
