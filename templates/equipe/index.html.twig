@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %} {% block extra_stylesheets %}
+<link rel="stylesheet" href="css/_equipe.css" />
+{% endblock %} {% block title %}Localisation{% endblock %} {% block body %}
+
+<main>
+    <br><br>  
+    <section class="pageEquipe">
+      
+        <h2>Base nautique de Carnon</h2>
+        <article class="serviceP">
+            <div>
+                <div class="grid1">
+                    {% for equipes in equipe %}
+                    {% if equipes.baseNautique == "CARNON"  %}
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="nomP"><h3 >{{ equipes.prenom }}</h3></div>
+                            <div class="posteP"><h3 >{{ equipes.poste }}</h3></div>
+                            <div class="ageP"> <h3 >{{ equipes.age }} ans</h3></div>
+                        </div>
+                        <div class="card-body collapse grid">
+                            <div id="texte">
+                                <p>{{ equipes.diplome }}</p>
+                                <img src="/images/{{ equipes.photo }}">
+                                <p>{{ equipes.presentation }}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+    <section class="pageEquipe">
+        <h2>Base nautique de Palavas</h2>
+        <article class="serviceP">
+            <div>
+                <div class="grid1">
+                    {% for equipes in equipe %}
+                    {% if equipes.baseNautique == "Palavas"  %}
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="nomP"><h3 >{{ equipes.prenom }}</h3></div>
+                            <div class="posteP"><h3 >{{ equipes.poste }}</h3></div>
+                            <div class="ageP"> <h3 >{{ equipes.age }} ans</h3></div>
+                        </div>
+                        <div class="card-body collapse grid">
+                            <div id="texte">
+                                <p>{{ equipes.diplome }}</p>
+                                <img src="/images/{{ equipes.photo }}">
+                                <p>{{ equipes.presentation }}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+
+
+
+
+    </section>
+
+</main>
+
+{% endblock %}

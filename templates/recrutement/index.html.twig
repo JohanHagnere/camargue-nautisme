@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+{% block extra_stylesheets %}
+<link rel="stylesheet" href="css/_recrutement.css" />{% endblock %}
+{% block title %}recrutement{% endblock %}
+
+
+
+{% block body %}
+<br><br><br>
+<main class="blocPage">
+<form class="formRecrut" action='{{ path('app_recrutement')}}' method="post">
+   <div class="separation">
+    <h1>Formulaire de candidature spontannée</h1>
+    <p>Tout d'abord, nous tenons à vous remercier de l'intérêt que vous portez à notre entreprise. Présent de longue date sur nos base nautiques, la passion et le dynamisme nous définissent bien, située sur un spot de kayak de renommée nationale, nous sommes fiers de proposer un services de qualité pour que nos clients puissent profiter au maximum de leur expérience sur l'eau.
+
+        Chez nous, nous croyons que la clé de la réussite réside dans une équipe soudée, autonome et motivée. C'est pourquoi nous attachons une grande importance à la fidélisation de notre personnel et nous sommes heureux de compter parmi nous des collaborateurs de longue date.
+        
+        Nous sommes convaincus que rejoindre notre entreprise est une opportunité unique de travailler dans un cadre exceptionnel et de participer à une aventure professionnelle enrichissante. Si vous partagez notre passion pour les activités nautiques, que vous êtes dynamique et motivé(e), nous serions ravis de découvrir votre candidature et de discuter avec vous de nos opportunités professionnelles.
+        
+        Merci encore pour votre intérêt et à bientôt !
+    <br></p>
+    </div>
+    
+    <div>
+    <div class="mb-3">
+        <h4><br>Poste auquel vous souhaitez candidater:</h4>
+        {{form_widget(form.posteCandidate)}}
+        {{form_errors(form.posteCandidate)}}
+    </div>
+</div>
+<section class="blocFormulaire">
+<div class="blocinfo"><h3>infomations civiles:</h3>
+    <div class="mb-1">
+       <p>nom:</p>
+        {{form_widget(form.nom)}}
+        {{form_errors(form.nom)}}
+    </div>
+    <div class="mb-1">
+        <p>Prénom:</p>
+        {{form_widget(form.prenom)}}
+        {{form_errors(form.prenom)}}
+    </div>
+    <div class="mb-1">
+        <p>Age:</p>
+        {{form_widget(form.age)}}
+        {{form_errors(form.age)}}
+    </div>
+</div>
+<div class="blocinfo">
+    <h3>Vos Coordonnées:</h3>
+    <div class="mb-1">
+        <p>Email:</p>
+        {{form_widget(form.mail)}}
+        {{form_errors(form.mail)}}
+    </div>
+    <div class="mb-1">
+        <p>Téléphone:</p>
+        {{form_widget(form.telephone)}}
+        {{form_errors(form.telephone)}}
+    </div>
+    <div class="mb-3">
+        <p>Adresse:</p>
+        {{form_widget(form.adresse)}}
+        {{form_errors(form.adresse)}}
+    </div>
+</div>
+</section>
+<section class="blocFormulaireb"></section>
+<div class="blocinfo">
+    <h3 >Vos compétances:</h3>
+    <div class="mb-3">
+        <p>Diplomes:</p>
+        {{form_widget(form.diplomes)}}
+        {{form_errors(form.diplomes)}}
+    </div>
+    <div class="mb-3">
+        <p>Experiences professionnels et associatifs:</p>
+        {{form_widget(form.experiences)}}
+        {{form_errors(form.experiences)}}
+    </div>
+</div>
+</section>
+    <br>
+    <button type="submit" class="btn btn-primary mt-5 float-end"><h3>Valider votre candidature</h3></button> {#float-end indique que le txte va allé
+    à droite#}
+    <a href="{{ path('app_home')}}" class="boutonAnnuler">annuler</a> {# 'app_note' page sur
+    laquelle on retourn et qui correspond au nom de la route dans Notecontroller #}
+
+    {{form_widget(form._token)}} {#token de sécurité c'est obligatoire pour faire valider les données par symfony, la
+    ligne est a copier tel quel avant la fermeture de la balise form à chaque fois que je fait un formulaire.#}
+    {% for flashMessage in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ flashMessage }}
+    </div>
+
+{% endfor %}
+</form>
+</main>
+{% endblock %}

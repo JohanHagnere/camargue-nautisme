@@ -25,9 +25,7 @@
     <div class="cartouche">
       <div class="entreprise">
         <h3>Qui sommes nous:</h3>
-        <p>
-          Camargue Nautisme, ghgqf ghhjff ehfjfgez aztetyza aztrtyzd ztyf
-          fefzrty zty t e fzty ygygegezygfg gezygdez g.
+        <p>Présent de longue date sur nos base nautiques, la passion et le dynamisme nous définissent bien, située sur un spot de kayak de renommée nationale, nous sommes fiers de proposer un services de qualité pour que nos clients puissent profiter au maximum de leur expérience sur l'eau.
         </p>
         <div class="depart">
           <div id="carnonF">
@@ -48,7 +46,7 @@
       </div>
       <div class="laTeam">
         <h3>La Team</h3>
-        <img class="imgTeam" src="{{ asset('images/team1.jpg') }}" alt="team" />
+        <a href="{{ path('app_equipe') }}"><img class="imgTeam" src="{{asset('images/team1.jpg')}}" alt="team"></a>
       </div>
     </div>
   </section>
@@ -57,9 +55,9 @@
     <p></p>
     <p></p>
     <a href="{{ path('app_localisation') }}">Contact</a>
-    <p>|</p>
-    <a href="">Recrutement</a>
-    <p>|</p>
+    <p> | </p>
+    <a href="{{ path('app_recrutement') }}">Recrutement</a>
+    <p> | </p>
     <a href="{{ path('app_cgu') }}">CGU</a>
     <p></p>
     <p></p>
