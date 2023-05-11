@@ -20,16 +20,15 @@
       {% endif %}
     </div>
     <div class="img-container hero-video-container">
-      <video autoplay muted loop class="hero-video">
+      <video
+        autoplay
+        muted
+        loop
+        class="hero-video"
+        poster="{{ asset('images/hero_img.jpg') }}"
+      >
         <source src="{{ asset('images/hero_kayak.webm') }}" type="video/webm" />
       </video>
-      {#
-      <img
-        src="{{ asset('images/hero_img.jpg') }}"
-        alt="Camargue-Nautisme"
-        class="hero-img"
-      />
-      #}
     </div>
     <div class="overlay"></div>
   </section>
