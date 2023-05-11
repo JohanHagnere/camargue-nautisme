@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %} {% block extra_stylesheets %}
-<link rel="stylesheet" href="{{ asset('css/_reservation.css') }}" /> {% endblock
-%} {% block title %}réserver!{% endblock %} {% block body %}
+<link rel="stylesheet" href="{{ asset('css/_reservation.css') }}" />
+{% endblock %} {% block title %}réserver!{% endblock %} {% block body %}
 
-<div class="example-wrapper">
+<main id="reservation-page">
   <h1>Reservations</h1>
 
   {{ form_start(form) }}
@@ -13,9 +13,9 @@
   {{ form_label(form.equipement) }}
   {{ form_widget(form.equipement) }}
   {{ form_errors(form.equipement) }}
-  <button type="submit">Envoyer</button>
+  <button class="cta big-btn" type="submit">Envoyer</button>
   {{ form_end(form) }}
-</div>
+</main>
 
 {% endblock %} {% block extra_scripts %}
 <script src="{{ asset('scripts/resa_modal.js') }}"></script>
