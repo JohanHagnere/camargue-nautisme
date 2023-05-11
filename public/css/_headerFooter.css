@@ -1,23 +1,24 @@
 /* Page CGU */
 .cgu {
-  background-color: aqua;
+  background-color: var(--light-blue);
 }
 
 /* header css */
 
 /* Version Mobile */
 
-
 /* Menu Burger */
-.navbarre{
+.navbarre {
   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-      padding: 0.5rem 1rem;
-      /* border-bottom: 1px solid red; */
-    
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  /* border-bottom: 1px solid red; */
 }
 #navMobile {
   display: flex;
@@ -26,7 +27,7 @@
 #navDesktop {
   display: none;
 }
-.textReserver{
+.textReserver {
   display: block;
   font-family: "Playfair Display";
   justify-content: flex-end;
@@ -39,16 +40,37 @@
   text-decoration: none;
   border: solid #1b2932;
 }
+
+/* Ajout change couleur */
+.textReserver {
+  transition: all 250ms ease-in-out;
+}
+
+.textReserver a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.textReserver a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.textReserver:hover {
+  color: var(--main-bg-color);
+  background-color: var(--light-blue);
+}
+
 .sidenav {
-  height: 310px ;
+  height: 310px;
   width: 250px;
   position: absolute;
   z-index: 1;
   top: 0.9em;
   right: 120rem;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(255, 255, 255);
   padding-top: 3rem;
-  transform: translate(0, 51px); 
+  transform: translate(0, 51px);
   transition: left 0.5s ease;
   border-radius: 0em 0em 0em 2em;
 }
@@ -58,13 +80,15 @@
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #9f2424;
+  color: #171717;
   display: flex;
   transition: 0.3s;
+  text-shadow: #171717 0em 0em 0.2em;
 }
 
 .sidenav a:hover {
-  color: #111;
+  color: #38229a;
+  text-shadow: #38229a 0.05em 0.05em 0.1em;
 }
 
 .sidenav ul {
@@ -95,12 +119,11 @@
   margin: 6px 0;
 }
 
-#openBtn{
+#openBtn {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
 
 .navLogo {
   display: flex;
@@ -113,6 +136,9 @@
   height: 40px;
 }
 
+.navLogo h1 {
+  display: none;
+}
 
 span .burger-icon {
   position: relative;
@@ -140,8 +166,6 @@ ul li {
   margin-left: 20px;
 }
 
-
-
 ul li a {
   font-size: 15px;
   color: black;
@@ -149,44 +173,40 @@ ul li a {
 }
 
 #navDesktop {
-  display: none  ;
+  display: none;
 }
 
 #navMobile {
   display: block;
 }
-  
 
 /*responsive*/
 
 /* Tablette */
 @media screen and (min-width: 744px) {
   #navDesktop {
-    display: none  ;
+    display: none;
   }
 
+  .navLogo h1 {
+    display: flex;
+  }
 }
-
-
 
 /* Desktop */
 @media screen and (min-width: 1000px) {
-
   #navDesktop {
-    display: flex  ;
-    gap:2rem;
-    }
+    display: flex;
+    gap: 2rem;
+  }
   #navMobile {
     display: none;
   }
 
+  .navLogo h1 {
+    display: flex;
+  }
 }
-
-
-
-
-
- 
 
 /* footer css */
 
@@ -196,7 +216,6 @@ footer {
   background-color: #99d7ff;
   display: flex;
   flex-direction: column;
-
 }
 
 .pictoReseaux {
@@ -222,9 +241,8 @@ footer {
 }
 
 .picto i {
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
-
 
 .contact {
   display: flex;
@@ -240,14 +258,13 @@ footer {
   background-color: rgb(255, 255, 255, 0.4);
   border-radius: 1em;
   padding: 1rem;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   height: auto;
   width: auto;
   gap: 1rem;
-
 }
 
 .entreprise {
@@ -259,7 +276,7 @@ footer {
   align-items: center;
   width: auto;
   height: auto;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .boutonDeparts {
@@ -273,18 +290,14 @@ footer {
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-weight: 500;
-
 }
 
 .depart {
-
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
-
-
 
 .laTeam {
   background-color: #99d7ff;
@@ -303,7 +316,6 @@ footer {
 }
 
 .recrutement {
-
   display: flex;
   justify-content: space-around;
   text-decoration: none;
@@ -314,32 +326,43 @@ footer {
 .recrutement a {
   text-decoration: none;
   /*Pour que le lien ne soit plus "souligné"...*/
-  color: #1B2932;
+  color: #1b2932;
   /*pour que le lien ne soit plus violet*/
 }
-
 
 .copyRight {
   background-color: rgb(255, 255, 255, 0.4);
 
   width: 100%;
-
 }
 
 .copy {
   display: flex;
   justify-content: space-between;
-
 }
-
 
 /*responsive*/
 
 /* Tablette */
-@media screen and (min-width: 744px) {}
+@media screen and (min-width: 744px) {
+  .cartouche {
+    flex-direction: row;
+  }
+
+  .picto i {
+    font-size: 2rem;
+  }
+}
 
 /* Desktop */
-@media screen and (min-width: 1000px) {}
+@media screen and (min-width: 1000px) {
+  .cartouche {
+    flex-direction: row;
+  }
+  .picto i {
+    font-size: 2rem;
+  }
+}
 
 /* @media only screen and (max-width: 767px) {
     footer section {
