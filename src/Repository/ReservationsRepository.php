@@ -39,6 +39,18 @@ class ReservationsRepository extends ServiceEntityRepository
         }
     }
 
+    public function findByDateAndModele($date, $modele)
+    {
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.date = :date')
+            ->setParameter('date', $date)
+            ->innerJoin('r.equipement', 'e')
+            ->andWhere('e.modele = :modele')
+            ->setParameter('modele', $modele)
+            ->getQuery()
+            ->getResult();
+    }
+
     // public function findByModeleAndDate(Equipement $equipement, Reservations $reservations) {
 
     // }

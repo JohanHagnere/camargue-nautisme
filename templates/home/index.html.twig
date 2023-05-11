@@ -9,21 +9,30 @@
       <a href="{{ path('app_reservation') }}" class="button cta big-btn"
         ><span>Réservez</span></a
       >
+      {% if messages %}
+      <div class="dispo-card">
+        Disponibilités pour aujourd'hui : {% for message in messages %}
+        <div class="dispo-location">
+          {{ message }}
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
     </div>
     <div class="img-container hero-video-container">
-      <video autoplay muted loop class="hero-video">
+      <video
+        autoplay
+        muted
+        loop
+        class="hero-video"
+        poster="{{ asset('images/hero_img.jpg') }}"
+      >
         <source src="{{ asset('images/hero_kayak.webm') }}" type="video/webm" />
       </video>
-      {#
-      <img
-        src="{{ asset('images/hero_img.jpg') }}"
-        alt="Camargue-Nautisme"
-        class="hero-img"
-      />
-      #}
     </div>
     <div class="overlay"></div>
   </section>
+
   <section class="presentation">
     <article class="home-presentation-first">
       <h3>Une expérience inoubliable</h3>

@@ -156,6 +156,9 @@ button {
   .presentation p {
     font-size: 2vw;
   }
+  .dispo-card {
+    font-size: 1.2rem;
+  }
   .hero h1 {
     /* font-size: 5vw; */
   }
@@ -174,4 +177,13 @@ button {
   .hero-content h1 {
     display: none;
   }
+}
+
+.dispo-card {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--light-blue);
+  width: fit-content;
+  padding: 0.5rem;
+  max-width: 95%;
+  color: var(--main-bg-color);
 }
