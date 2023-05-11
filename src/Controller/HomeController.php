@@ -31,7 +31,9 @@ class HomeController extends AbstractController
             $message = $magasin . ' : ';
             foreach ($types as $type) {
                 $allOfType = $equipementsRepository->findBy(["modele" => $type, "magasin" => $magasin]);
-                $allResa = $reservationsRepository->findBy(["date" => new DateTime(), "equipement" => $type]);
+                $now = new DateTime();
+                $now->setTime(0, 0, 0, 0);
+                $allResa = $reservationsRepository->findByDateAndModele($now, $type);
                 $availableEquipments = [];
                 foreach ($allOfType as $item) {
                     $isReserved = false;
@@ -47,10 +49,10 @@ class HomeController extends AbstractController
                 }
                 $message .= count($availableEquipments) . ' ' . $type . ', ';
             }
+
             $message = rtrim($message, ', ');
             $messages[] = $message;
         }
-
         return $messages;
     }
 }
