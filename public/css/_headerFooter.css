@@ -15,7 +15,7 @@
   align-items: center;
   background-color: #fff;
   padding: 0.5rem 1rem;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 4;
   /* border-bottom: 1px solid red; */

@@ -30,7 +30,7 @@
     <div id="navMobile">
       {# Menu burger #}
       <div id="mySidenav" class="sidenav">
-        <a id="closeBtn" href="#" class="close">×</a>
+        <span id="closeBtn" class="close">×</span>
         <ul>
           <li><a href="{{ path('app_home') }}">Accueil</a></li>
           <li><a href="{{ path('app_equipements') }}">Equipements</a></li>
@@ -39,16 +39,16 @@
         </ul>
       </div>
 
-      <a href="#" id="openBtn">
+      <span id="openBtn">
         <span class="burger-icon">
           <span></span>
           <span></span>
           <span></span>
         </span>
-      </a>
+      </span>
     </div>
     <div class="textReserver">
-      <a href=""><h6>Réserver</h6></a>
+      <a href="{{ path('app_reservation') }}"><h6>Réserver</h6></a>
     </div>
   </nav>
 </header>
